@@ -1,29 +1,52 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Calculator</title>
-    <link rel="stylesheet" href="styling.css" />
-  </head>
-  <body>
-    <div class="main">
-      <div class="inputs">
-        <h1 class="result">Result</h1>
-        <select id="selectOp">
-          <option value="plus">+</option>
-          <option value="min">-</option>
-          <option value="dev">/</option>
-          <option value="multi">*</option>
-        </select>
-        <input type="number" class="num1" placeholder="Number 1" />
-        <input type="number" class="num2" placeholder="Number 2" />
-      </div>
-      <div class="submitBtn">
-        <button id="btn">Submit</button>
-      </div>
-    </div>
+<!DOCTYPE html>
+<html>
 
-    <script src="calculation.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Calculate me! - A calculator made my me</title>
+  <link href="styling.css" rel="stylesheet" type="text/css" />
+  <link href="utils.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1 class="text-center">Welcome to Calculate me!</h1>
+  <div class="container flex flex-col items-center mx-auto m-w-20">
+    <div class="row">
+      <input class="input" type="text"/>
+    </div>
+    <div class="row">
+      <button class="button">C</button>
+      <button class="button">%</button>
+      <button class="button">M+</button>
+      <button class="button">M-</button>
+    </div>
+    <div class="row">
+      <button class="button">7</button>
+      <button class="button">8</button>
+      <button class="button">9</button>
+      <button class="button">*</button>
+    </div>
+    <div class="row">
+      <button class="button">4</button>
+      <button class="button">5</button>
+      <button class="button">6</button>
+      <button class="button">/</button>
+    </div>
+    <div class="row">
+      <button class="button">1</button>
+      <button class="button">2</button>
+      <button class="button">3</button>
+      <button class="button">+</button>
+    </div>
+    <div class="row">
+      <button class="button">0</button>
+      <button class="button">.</button>
+      <button class="button">=</button>
+      <button class="button">-</button>
+    </div>
+  </div>
+  <script src="calculation.js"></script>
+</body>
+
 </html>
