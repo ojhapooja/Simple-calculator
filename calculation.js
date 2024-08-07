@@ -1,20 +1,19 @@
-document.getElementById("btn").addEventListener("click", function () {
-    let num1 = document.querySelector(".num1").value;
-    let num2 = document.querySelector(".num2").value;
-    let result = document.querySelector(".result");
-    let oprator = document.getElementById("selectOp").value;
-  
-    switch (oprator) {
-      case "plus":
-        result.innerHTML = Number(num1) + Number(num2);
-        break;
-      case "min":
-        result.innerHTML = Number(num1) - Number(num2);
-        break;
-      case "dev":
-        result.innerHTML = Number(num1) / Number(num2);
-        break;
-      case "multi":
-        result.innerHTML = Number(num1) * Number(num2);
+let string = "";
+let buttons = document.querySelectorAll('.button');
+Array.from(buttons).forEach((button)=>{
+  button.addEventListener('click', (e)=>{
+    if(e.target.innerHTML == '='){
+      string = eval(string);
+      document.querySelector('input').value = string;
     }
-  });
+    else if(e.target.innerHTML == 'C'){
+      string = ""
+      document.querySelector('input').value = string;
+    }
+    else{ 
+    console.log(e.target)
+    string = string + e.target.innerHTML;
+    document.querySelector('input').value = string;
+      }
+  })
+})
